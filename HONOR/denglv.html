@@ -176,7 +176,7 @@
 			}
 			.a{
 				color: red;
-				/* margin-left: 500px; */
+				margin-right: 500px;
 			}
 		</style>
 	</head>
@@ -185,7 +185,7 @@
 			<div class="oimg-hua"><img src="img/zhuce/HUAWEI.svg"><span>华为商城</span></div>
 		</nav>
 		<div class="banner">
-			<div class="banner-1"><span>华为账号登录</span><a class="a" href="http://127.0.0.1/HONOR/zhuce.html">注册</a></div>
+			<div class="banner-1"><a class="a" href="http://127.0.0.1/HONOR/zhuce.html">注册</a><span>华为账号登录</span></div>
 			<div class="banner-2">
 				<div class="banner-2-L">
 					<div class="banner-2-L1">
@@ -224,11 +224,13 @@
 </html>
 <script src="js/new_file.js"></script>
 <script>
+	//登录
 	let login1 = localStorage.getItem('login1');
 	login1=0;
 	localStorage.setItem('login1', login1);
 	let c,d;
-	$("#tijiao").attr("disabled", true);
+	$("#tijiao").attr("disabled", true);//提交先禁用
+	//正则
 	$("#zhanghao").blur(function(){
 		let a=$("#zhanghao").val();
 		let b=/^\w{5,10}$/;
@@ -254,6 +256,7 @@
 			$("#mima1").html("密码不对  5-8位纯数字")
 		}
 	})
+	//交互
 	$("#tijiao").click(function(e) {
 		if(c==true&&d==true){
 			console.log("1111")
