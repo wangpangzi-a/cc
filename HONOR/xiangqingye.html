@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/xiangqingye.css" />
+		<title></title>
+	</head>
+	<body>
+		<div id="header">
+			<div class="header_1">
+				<ul>
+					<li>
+						<a href="#">首页</a>
+						<a href="#">华为官网</a>
+						<a href="#">荣耀官网</a>
+						<a href="#">花粉俱乐部</a>
+						<a href="#">企业购</a>
+						<a href="#">dssdsd</a>
+						<a href="#">更多精彩</a>
+						<a href="#"></a>
+					</li>
+					<li>
+						<a href="#">请登录</a>
+						<a href="#">注册</a>
+						<a href="#">我的订单</a>
+						<a href="#">客户服务</a>
+						<a href="#">网站导航</a>
+						<a href="#">手机版</a>
+						<span><a href="#">购物车(0)</a></span>
+					</li>
+				</ul>
+			</div>
+			<div class="header_2">
+				<ul>
+					<li><img src=""></li>
+					<li class="glyphicon glyphicon-th-list">全部商品分类</li>
+					<li>华为专区</li>
+					<li>荣耀专区</li>
+					<li>华为P40</li>
+					<li>荣耀30系列</li>
+					<li>安心居家</li>
+					<li>
+						<input type="text" name="" id="" value="" class="glyphicon glyphicon-search" />
+					</li>
+				</ul>
+			</div>
+
+
+		</div>
+
+
+
+
+		<div id="content">
+			<div class="content_1">
+				<div class="content_11">
+					<a href="#">首页 > 智能家居 > 智能路由 ><span class="qqq"></span></a>
+				</div>
+				<ul>
+					<li id="small">
+						<img src="">
+						<div id="mask"></div>
+					</li>
+					<li class="content_rigth">
+						<div id="big">
+							<img src="">
+						</div>
+						<p id="mingzi"></p>
+						<p>【现货速发】①限时优惠20元②三期免息③领券更优惠</p>
+						<b>
+							<span>价格</span>
+							<span id="jiage"></span><br>
+							<span>促销</span>
+							<span>限时特价</span>
+							<span>银联、掌上生活、花呗、工行分期支付可享免息（免息活动适用于单款免息商品订单，含...</span><br>
+							<span>分期免息</span>
+							<span>赠送积分</span>
+						</b>
+						<p>
+							服务说明 <span>北京>北京>东城区</span>
+						</p>
+						<p>
+							商品编码<span>3001010021001</span>
+						</p>
+						<p>
+							选择颜色<img src="">
+						</p>
+						<p>
+							分期免息<span>掌上生活分期</span><span>花呗分期</span>
+						</p>
+						<p>
+							已选商品：<span>白色</span>
+						</p>
+					</li>
+
+
+					<div class="content_bottom">
+						<div class="content_bottom1">
+							<button type="button">
+								<</button> <img src="">
+									<img src="">
+									<img src="">
+									<img src="">
+									<img src="">
+									<button type="button">></button>
+						</div>
+						<div class="content_bottom2">
+							<div class="">
+								<span id="shuliang">1</span>
+								<button type="button" id="jia">+</button><br>
+								<button type="button" id="jian">-</button>
+							</div>
+							<b id="tanchukuang"><a href="#">加入购物车</a></b>
+							<p id="xiadan"><a href="#">立即下单</a></p>
+						</div>
+
+					</div>
+				</ul>
+
+			</div>
+
+
+
+		</div>
+
+
+
+
+
+		<div id="footer"></div>
+		<div id="box">
+			<p class="qqq">【新品上市】荣耀路由3 Wifi6+智能分频 凌霄双核3000Mbps 多穿一堵墙 儿童保护+加速利器成功加入购物车!</p>
+			<button type="button" id="button1">再逛逛</button>
+			<button type="button" id="button2">去结算</button>
+		</div>
+	</body>
+</html>
+<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//数据库添加
+	$("#xiadan").click(function() {
+		var login = JSON.parse(localStorage.getItem("login"));
+		var login1 = JSON.parse(localStorage.getItem("login1"));
+		if (login1 == 1) {
+			$.ajax({
+				type: "POST",
+				url: "php/gouwuche.php",
+				data: "id=" + login + "&jiage=" + $("#jiage").html() + "&name=" + $("#mingzi").html() + "&img=" + $(
+					"#small img").attr("src") + "&shuliang=" + $("#shuliang").html(),
+				success: function(a) {
+					console.log(a);
+					// ccc(a);
+					$(location).prop('href', 'http://127.0.0.1/HONOR/gouwuche.html');
+				}
+			})
+		}else{
+			$(location).prop('href', 'http://127.0.0.1/HONOR/denglv.html');	
+		}
+
+
+
+		
+	})
+
+	// for(let i=0;i<b1.length;i++){
+
+	// 	let b2=b1[i].split("=");
+	// 	console.log(b2);
+	// 	// c.push({b2[0]+':'b2[1]});
+	// }
+	// return JSON.stringify(b2)
+	// len = b1.length,    array = [];   
+
+	// for(let i=0;i<len;i++){      
+
+	// array.push({"projectname":b1[i][0],"projectnumber":b1[i][1]});    }  
+
+	// return JSON.stringify(array);  
+
+	//数量
+	$("#jia").click(function() {
+		a = Number($("#shuliang").html());
+		if (a < 9) {
+			$("#shuliang").html(a + 1);
+		}
+	})
+	$("#jian").click(function() {
+		a = Number($("#shuliang").html());
+		if (a > 1) {
+			$("#shuliang").html(a - 1);
+		}
+
+	})
+
+
+
+
+
+
+	$(".content_bottom1 img").mouseover(function() {
+		$(".content_bottom img").css({
+			border: "none"
+		});
+		$(this).css({
+			border: "1px solid red"
+		});
+		let a = $(this).attr("src");
+		console.log(a)
+		$("#small img").attr("src", a);
+		$("#big img").attr("src", a)
+
+	})
+	//弹出框选择按钮
+	$("#button1").click(function() {
+		$("#box").css({
+			display: "none"
+		});
+	})
+	$("#button2").click(function() {
+		var login = JSON.parse(localStorage.getItem("login"));
+		var login1 = JSON.parse(localStorage.getItem("login1"));
+		if (login1 == 1) {
+			$.ajax({
+				type: "POST",
+				url: "php/gouwuche.php",
+				data: "id=" + login + "&jiage=" + $("#jiage").html() + "&name=" + $("#mingzi").html() + "&img=" + $(
+					"#small img").attr("src") + "&shuliang=" + $("#shuliang").html(),
+				success: function(a) {
+					console.log(a);
+					// ccc(a);
+					$(location).prop('href', 'http://127.0.0.1/HONOR/gouwuche.html');
+				}
+			})
+			
+		}else{
+			$(location).prop('href', 'http://127.0.0.1/HONOR/denglv.html');
+	}})
+
+
+
+
+	//放大镜
+	$("#small").mouseenter(function() {
+		$("#mask,#big").show();
+	}).mouseleave(function() {
+		$("#mask,#big").hide();
+	}).mousemove(function(e) {
+		let l = e.pageX - $(this).offset().left - $("#mask").width() * 0.5;
+		let t = e.pageY - $(this).offset().top - $("#mask").height() * 0.5;
+		if (l <= 0) {
+			l = 0;
+		}
+		if (l >= $(this).width() - $("#mask").width()) {
+			l = $(this).width() - $("#mask").width();
+		}
+		if (t <= 0) {
+			t = 0;
+		}
+		if (t >= $(this).height() - $("#mask").height()) {
+			t = $(this).height() - $("#mask").height();
+		}
+
+		$("#mask").css({
+			left: l,
+			top: t
+		})
+
+		let n = $("#big img").width() / $(this).width()
+		$("#big img").css({
+			left: -n * l,
+			top: -n * t
+		})
+	})
+
+	//弹出框调用
+	let btn = document.querySelector("#tanchukuang");
+	let box = document.querySelector("#box");
+
+	btn.onclick = function() {
+		let p = new PopPlugin(box);
+		p.setBoxPosition();
+	}
+
+
+	//弹出框
+	class PopPlugin {
+		constructor(newBox) {
+			this.box = newBox;
+			this.btnDiv = null;
+		}
+		setBoxPosition() {
+			this.box.style.display = "block";
+			//要想获取offsetWidth display必须设置为block
+			this.box.style.left = window.innerWidth / 2 - this.box.offsetWidth / 2 + "px";
+			this.box.style.top = window.innerHeight / 2 - this.box.offsetHeight / 2 + "px";
+			this.creatBtn();
+		}
+		creatBtn() {
+			if (this.btnDiv == null) {
+				this.btnDiv = document.createElement("b");
+			}
+			//记得加定位
+			this.btnDiv.style.position = "absolute";
+			this.btnDiv.style.width = 16 + "px";
+			this.btnDiv.style.height = 16 + "px";
+			this.btnDiv.innerHTML = "X";
+			this.box.appendChild(this.btnDiv);
+			//必须先有元素才有offsetWidth 这些东西
+			this.btnDiv.style.left = this.box.offsetWidth - this.btnDiv.offsetWidth + "px";
+			this.btnDiv.style.top = 0;
+			this.closeBox();
+		}
+		closeBox() {
+			let that = this;
+			this.btnDiv.onclick = function() {
+				that.box.style.display = "none";
+			}
+		}
+	}
+
+	//xuanran
+	function huoqu() {
+		let a = location.href;
+		let a1 = a.indexOf("?");
+		if (a1 == -1) {
+			return "";
+		}
+		let b = a.substring(a1 + 1);
+		let b1 = b.split("&");
+		let c = new Object;
+		for (let i in b1) {
+			let b2 = b1[i].split("=");
+			c[b2[0]] = b2[1];
+		}
+		return c;
+	}
+	let z = huoqu();
+	console.log(z);
+	if (z != "") {
+		z1 = z['xuliehao'];
+		$.ajax({
+			type: "POST",
+			url: "php/xiangqing.php",
+			data: "xuliehao=" + z1,
+			success: function(a) {
+				console.log(a);
+				ccc(a);
+			}
+		})
+	}
+
+
+	function ccc(a) {
+		let a1 = a.split('[');
+		let a2 = a1[1].split(']');
+		let a3 = a2[0];
+		let b = JSON.parse(a3);
+		$("#mingzi").html(b.mingzi);
+		$(".qqq").html(b.mingzi);
+		$("#jiage").html(b.jiage);
+		let img = b.tupian.split('=');
+		console.log(img.length);
+		$("img").eq(0).attr("src", "img/购物车/" + img[0] + ".png");
+		$("img").eq(1).attr("src", "img/购物车/" + img[1] + ".png");
+		$("img").eq(2).attr("src", "img/购物车/" + img[1] + ".png");
+		$("img").eq(3).attr("src", "img/购物车/" + img[1] + ".png");
+		$("img").eq(4).attr("src", "img/购物车/" + img[1] + ".png");
+		$("img").eq(5).attr("src", "img/购物车/" + img[2] + ".png");
+		$("img").eq(6).attr("src", "img/购物车/" + img[3] + ".png");
+		$("img").eq(7).attr("src", "img/购物车/" + img[4] + ".png");
+		$("img").eq(8).attr("src", "img/购物车/" + img[5] + ".png");
+	}
+</script>

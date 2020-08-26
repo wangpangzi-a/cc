@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		 crossorigin="anonymous">
+		 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			*{
+				padding: 0;margin: 0;}
+			
+			nav {
+				width: 100%;
+				height: 40px;
+				background-color: #F2F2F2;
+			}
+			
+			.oimg-hua {
+				width: 1000px;
+				height: 40px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.oimg-hua img {
+				position: absolute;
+				left: 0;
+				top: 5px;
+				width: 100px;
+				height: 30px;
+			}
+			
+			.oimg-hua span {
+				position: absolute;
+				left: 105px;
+				line-height: 40px;
+				width: 100px;
+				height: 40px;
+				font-size: 14px;
+				font-weight: 700;
+			}
+			.banner{
+				width: 100%;
+				height: 600px;
+				margin-top: 50px;
+			}
+			.banner-1{
+				width: 100%;
+				height:60px;
+				line-height: 60px;
+				font-size: 25px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.banner-2{
+				
+				width: 70%;
+				height: 400px;
+				margin: 0 auto;
+				/* background-color: #6B6B6B; */
+				display: flex;
+				margin-top:20px;
+				justify-content: space-around; 
+			}
+			.banner-2-L{
+				width: 45%;
+				height: 400px;
+				/* background-color: #000000; */
+			}
+			.banner-2-R{
+				width: 45%;
+				height: 400px;
+				/* background-color: #000000; */
+			}
+			.banner-2-L1{
+				width: 100%;
+				height: 300px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.banner-2-Z{
+				width: 2px;
+				height: 60%;
+				background-color: rgba(0,0,0,.2);
+			}	
+			.banner-2-L1 img{
+				width: 150px;
+				height: 150px;
+				display: block;
+				border: 20px solid rgba(0,0,0,.2);
+			}
+			.banner-2-L span{
+				display: block;
+				font-size: 12px;
+				width: 100%;
+				text-align: center;
+			}
+			form{
+				width: 60%;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			#sumit1 {
+				width: 200px;
+				height: 40px;
+				margin-left: 30px;
+				/* margin: 0 auto; */
+				margin-top: 50px;
+			}
+			.form-he{
+				margin-top: 30px;
+				position: relative;
+			}
+			footer{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 100px;
+				background-color: #F2F2F2;
+			}
+			.footer-a1{
+				width: 60%;
+				height:50px;
+				margin: 0 auto;
+			}
+			.footer-a1 ul{
+				width: 100%;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.footer-a1 ul li{
+				font-size: 12px;
+				height: 15px;
+				list-style: none;
+				padding: 0 10px;
+				text-align: center;
+				border-right: 1px solid black;
+				line-height: 15px;
+			}
+			.footer-a2{
+				width: 100%;
+				height: 40px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				line-height: 40px;
+				font-size: 10px;
+			}
+			#ospan1,#ospan2,#ospan3 {
+				width: 200px;
+				height: 35px;
+				text-align: left;
+				display: block;
+				/* background-color: #4169E1; */
+				font-size: 12px;
+				position: absolute;
+				right: -200px;
+				top: 0;
+			}
+			
+			.aa1{
+				width: 10px;
+				height: 40px;
+				line-height: 35px;
+				display: none;
+				position: absolute;
+				top: 5px;
+				right: -20px;
+			}
+			.a{
+				color: red;
+				/* margin-left: 500px; */
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="oimg-hua"><img src="img/zhuce/HUAWEI.svg"><span>华为商城</span></div>
+		</nav>
+		<div class="banner">
+			<div class="banner-1"><span>华为账号登录</span><a class="a" href="http://127.0.0.1/HONOR/zhuce.html">注册</a></div>
+			<div class="banner-2">
+				<div class="banner-2-L">
+					<div class="banner-2-L1">
+						<img src="img/zhuce/erweima.png">
+					</div>
+					<span>若您使用华为手机，请进入"<a href="#">设置</a>">"<a href="#">华为账号</a>"扫码登录</span>
+				</div>
+				<div class="banner-2-Z"></div>
+				<div class="banner-2-R">
+					
+						<div class="form-group form-he">
+							<input type="text" class="form-control" placeholder="账号" name="zhanghao" id="zhanghao"><span id="zhanghao1"></span>
+						</div>
+						<div class="form-group form-he">
+							<input type="password" class="form-control" placeholder="密码" name="mima" id="mima"><span id="mima1"></span>
+						</div>
+						<div class="form-sumit1">
+							<input type="submit" class="btn btn-primary " id="tijiao" value="登录" id="oin4">
+						</div>
+					
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-a1">
+				<ul>
+					<li>华为账号与云空间用户协议</li>
+					<li>关于华为账号与云空间隐私的声明</li>
+					<li>常见问题</li>
+					<li>Cookies</li>
+				</ul>
+			</div>
+			<div class="footer-a2"><span>dahuanglaoshishilaowang</span></div>
+		</footer>
+	</body>
+</html>
+<script src="js/new_file.js"></script>
+<script>
+	let login1 = localStorage.getItem('login1');
+	login1=0;
+	localStorage.setItem('login1', login1);
+	let c,d;
+	$("#tijiao").attr("disabled", true);
+	$("#zhanghao").blur(function(){
+		let a=$("#zhanghao").val();
+		let b=/^\w{5,10}$/;
+		if(b.test(a)==true){
+			$("#zhanghao1").html("");
+			c=true;
+			return c;
+		}else{
+			$("#zhanghao1").html("账号不对，最多十位，数字字母下划线")
+		}
+	})
+	$("#mima").blur(function(){
+		let a=$("#mima").val();
+		let b=/^\d{5,8}$/;
+		if(b.test(a)==true){
+			$("#mima1").html("");
+			d=true;
+			if(c==true&&d==true){
+			$("#tijiao").removeAttr("disabled","")
+			};
+			return d;
+		}else{
+			$("#mima1").html("密码不对  5-8位纯数字")
+		}
+	})
+	$("#tijiao").click(function(e) {
+		if(c==true&&d==true){
+			console.log("1111")
+			$.ajax({
+			   type: "POST",
+			   url: "php/denglv.php",
+			   data: "zhanghao="+$("#zhanghao").val()+"&mima="+$("#mima").val(),
+			   success: function(a){
+			     if(a=="登录成功"){
+			     // $(location).prop('href','http://127.0.0.1/HONOR/xiangqingye.html?xuliehao=a1')
+				 let login1 = localStorage.getItem('login1');
+				 let login = localStorage.getItem('login');
+				 login = $("#zhanghao").val();
+				 login1=1;
+				 localStorage.setItem('login', login);
+				 localStorage.setItem('login1', login1);
+				 $(location).attr('href','http://127.0.0.1/HONOR/gouwuche.html');
+			     }else{
+					 let login1 = localStorage.getItem('login1');
+					 login1=0;
+					 localStorage.setItem('login1', login1);
+					 alert("瓜，再来")
+				 }
+				 
+			   }
+			});
+			
+			return true;
+		}else{
+			e.preventDefault();
+			return false;
+		}
+	});
+</script>
