@@ -257,7 +257,7 @@
 	//注销
 	$(".obtn").click(function() {
 		alert("注销成功，请登录");
-		window.location.href = 'http://127.0.0.1/HONOR/denglv.html';
+		window.location.href = 'http://10.35.167.65/HONOR/denglv.html';
 	})
 
 	// 验证是否登录
@@ -285,7 +285,7 @@
 			})
 			// return false;
 		} else {
-			window.location.href = 'http://127.0.0.1/HONOR/denglv.html';
+			window.location.href = 'http://10.35.167.65/HONOR/denglv.html';
 		}
 	});
 	//渲染
@@ -314,7 +314,7 @@
 			$(".banner-sh").append(a);
 			let b = JSON.parse(a4[i]);
 			$(".name").eq(i).html(b.name);
-			$(".danjia").eq(i).html(b.jiage);
+			$(".danjia").eq(i).html("￥"+b.jiage);
 			$("img").eq(i + 1).attr("src", b.img)
 			$(".shuliang").eq(i).html(b.shuliang);
 		}
